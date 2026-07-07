@@ -104,6 +104,7 @@ def init_and_seed_db():
                 df = df[['fund_house', 'month_year', 'aum_crore']]
                 
             elif table_name == "fact_sip":
+                # Create a strict positional dataframe mapping index positions 0 and 1
                 clean_df = pd.DataFrame()
                 clean_df['month_year'] = df.iloc[:, 0]
                 clean_df['sip_inflow_crore'] = df.iloc[:, 1]
